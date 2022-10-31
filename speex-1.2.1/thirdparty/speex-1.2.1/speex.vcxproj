@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\speex\speex.h" />
+    <ClInclude Include="include\speex\speex_bits.h" />
+    <ClInclude Include="include\speex\speex_callbacks.h" />
+    <ClInclude Include="include\speex\speex_header.h" />
+    <ClInclude Include="include\speex\speex_stereo.h" />
+    <ClInclude Include="include\speex\speex_types.h" />
+    <ClInclude Include="src\arch.h" />
+    <ClInclude Include="src\bfin.h" />
+    <ClInclude Include="src\cb_search.h" />
+    <ClInclude Include="src\cb_search_arm4.h" />
+    <ClInclude Include="src\cb_search_bfin.h" />
+    <ClInclude Include="src\cb_search_sse.h" />
+    <ClInclude Include="src\fftwrap.h" />
+    <ClInclude Include="src\filters.h" />
+    <ClInclude Include="src\filters_arm4.h" />
+    <ClInclude Include="src\filters_bfin.h" />
+    <ClInclude Include="src\filters_sse.h" />
+    <ClInclude Include="src\fixed_arm4.h" />
+    <ClInclude Include="src\fixed_arm5e.h" />
+    <ClInclude Include="src\fixed_bfin.h" />
+    <ClInclude Include="src\fixed_debug.h" />
+    <ClInclude Include="src\fixed_generic.h" />
+    <ClInclude Include="src\kiss_fft.h" />
+    <ClInclude Include="src\kiss_fftr.h" />
+    <ClInclude Include="src\lpc.h" />
+    <ClInclude Include="src\lpc_bfin.h" />
+    <ClInclude Include="src\lsp.h" />
+    <ClInclude Include="src\lsp_bfin.h" />
+    <ClInclude Include="src\ltp.h" />
+    <ClInclude Include="src\ltp_arm4.h" />
+    <ClInclude Include="src\ltp_bfin.h" />
+    <ClInclude Include="src\ltp_sse.h" />
+    <ClInclude Include="src\math_approx.h" />
+    <ClInclude Include="src\modes.h" />
+    <ClInclude Include="src\nb_celp.h" />
+    <ClInclude Include="src\os_support.h" />
+    <ClInclude Include="src\quant_lsp.h" />
+    <ClInclude Include="src\quant_lsp_bfin.h" />
+    <ClInclude Include="src\sb_celp.h" />
+    <ClInclude Include="src\smallft.h" />
+    <ClInclude Include="src\stack_alloc.h" />
+    <ClInclude Include="src\vbr.h" />
+    <ClInclude Include="src\vorbis_psy.h" />
+    <ClInclude Include="src\vq.h" />
+    <ClInclude Include="src\vq_arm4.h" />
+    <ClInclude Include="src\vq_bfin.h" />
+    <ClInclude Include="src\vq_sse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\bits.c" />
+    <ClCompile Include="src\cb_search.c" />
+    <ClCompile Include="src\exc_10_16_table.c" />
+    <ClCompile Include="src\exc_10_32_table.c" />
+    <ClCompile Include="src\exc_20_32_table.c" />
+    <ClCompile Include="src\exc_5_256_table.c" />
+    <ClCompile Include="src\exc_5_64_table.c" />
+    <ClCompile Include="src\exc_8_128_table.c" />
+    <ClCompile Include="src\fftwrap.c" />
+    <ClCompile Include="src\filters.c" />
+    <ClCompile Include="src\gain_table.c" />
+    <ClCompile Include="src\gain_table_lbr.c" />
+    <ClCompile Include="src\hexc_10_32_table.c" />
+    <ClCompile Include="src\hexc_table.c" />
+    <ClCompile Include="src\high_lsp_tables.c" />
+    <ClCompile Include="src\kiss_fft.c" />
+    <ClCompile Include="src\kiss_fftr.c" />
+    <ClCompile Include="src\lpc.c" />
+    <ClCompile Include="src\lsp.c" />
+    <ClCompile Include="src\lsp_tables_nb.c" />
+    <ClCompile Include="src\ltp.c" />
+    <ClCompile Include="src\modes.c" />
+    <ClCompile Include="src\modes_wb.c" />
+    <ClCompile Include="src\nb_celp.c" />
+    <ClCompile Include="src\quant_lsp.c" />
+    <ClCompile Include="src\sb_celp.c" />
+    <ClCompile Include="src\smallft.c" />
+    <ClCompile Include="src\speex.c" />
+    <ClCompile Include="src\speex_callbacks.c" />
+    <ClCompile Include="src\speex_header.c" />
+    <ClCompile Include="src\stereo.c" />
+    <ClCompile Include="src\vbr.c" />
+    <ClCompile Include="src\vq.c" />
+    <ClCompile Include="src\window.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="speex.def" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{07FC0A1C-D5EF-4BEE-B0B0-ED0D24EA1D0B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>staticlibtemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;HAVE_CONFIG_H;_WINDOWS;WIN32;_WIN32_WINNT=0x0601;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_DEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>speex.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;HAVE_CONFIG_H;_WINDOWS;WIN32;_WIN32_WINNT=0x0601;_USRDLL;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;NDEBUG</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <ModuleDefinitionFile>speex.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
